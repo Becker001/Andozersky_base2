@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="form__book">
+  <div class="box__book">
+    <div class="content__book">
+      <h3 class="title__book">Найдите свое идеальное место</h3>
+    </div>
+    <form name="test" method="post" action="">
+      {% csrf_token %}
+      {% if success %}
+      <div>
+        <strong>Спасибо за сообщение</strong>
+      </div>
+      {% endif %}
+      <div class="book__box__input">
+        <div class="input__box__one">
+
+          <div class="box__input">
+            <p class="caption__form__book">Имя</p>
+
+            {{ form.name }}
+            {% if form.name.errors %}
+            <div>
+              <strong>{{ form.name.errors }}</strong>
+            </div>
+            {% endif %}
+          </div>
+
+          <!-- <input class="input__book" type="text" size="40" placeholder="Иван"> -->
+          <div class="box__input">
+            <p class="caption__form__book">Фамилия</p>
+
+            {{ form.surname }}
+            {% if form.surname.errors %}
+            <div>
+              <strong>{{ form.surname.errors }}</strong>
+            </div>
+            {% endif %}
+          </div>
+          <!-- <input class="input__book" type="text" size="40" placeholder="Васильев"> -->
+        </div>
+        <div class="input__box__two">
+          <div class="box__input">
+
+            <p class="caption__form__book">Телефон</p>
+            {{ form.number }}
+            {% if form.number.errors %}
+            <div>
+              <strong>{{ form.number.errors }}</strong>
+            </div>
+            {% endif %}
+
+          </div>
+
+          <!-- <p class="caption__form__book">Телефон</p>
+          <input class="input__book" type="text" size="40" placeholder="+7(XXX) XXX XX-XX"> -->
+          <div class="box__input">
+            <p class="caption__form__book">Почта</p>
+            {{ form.email }}
+            {% if form.email.errors %}
+            <div>
+              <strong>{{ form.email.errors }}</strong>
+            </div>
+            {% endif %}
+          </div>
+
+          <!-- <p class="caption__form__book">Почта</p>
+          <input class="input__book" type="text" size="40" placeholder="example@yandex.ru"> -->
+
+        </div>
+      </div>
+
+      <div class="calendar__book">
+        <h3 class="calendar__title">Когда вы хотите отправиться в лагерь?</h3>
+        <div class="input__box__calendar">
+          <div class="box__input">
+            <p class="caption__form__book">Туда</p>
+            {{ form.data }}
+            {% if form.data.errors %}
+            <div>
+              <strong>{{ form.data.errors }}</strong>
+            </div>
+            {% endif %}
+          </div>
+          <!-- <input class="input__book__calendar" type="date" size="40" placeholder="example@yandex.ru"> -->
+          <div class="box__input">
+            <p class="caption__form__book">Обратно</p>
+            {{ form.data2 }}
+            {% if form.data2.errors %}
+            <div>
+              <strong>{{ form.data2.errors }}</strong>
+            </div>
+            {% endif %}
+          </div>
+          <!-- <p class="caption__form__book">Обратно</p>
+          <input class="input__book__calendar" type="date" size="40" placeholder="example@yandex.ru"> -->
+
+        </div>
+      </div>
+
+      <div class="people__box">
+        <h3 class="calendar__title">Количество человек</h3>
+        <div class="people__input__box">
+          <button class="button__book" id="decreaseButton">-</button>
+          {{ form.place }}
+          {% if form.place.errors %}
+          <div>
+            <strong>{{ form.place.errors }}</strong>
+          </div>
+          {% endif %}
+          <!-- <input class="people__input" type="text" id="numberField" value="0" placeholder="2" /> -->
+          <button class="button__book" id="increaseButton">+</button>
+        </div>
+
+      </div>
+
+      <div class="message__book">
+        <p class="caption__book">Дополнительные пожелания</p>
+        {{ form.message }}
+        {% if form.message.errors %}
+        <div>
+          <strong>{{ form.message.errors }}</strong>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="botton__book__box">
+        <button class="botton__book">Забронировать</button>
+      </div>
+    </form>
+  </div>
+
+</section>
+{% endblock %}

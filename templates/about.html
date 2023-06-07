@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="hero">
+
+
+  <div class="hero__text">
+    <div class="text__caption">Андозерская усадьба</div>
+    <div class="text__title">
+      <h1 class="h1__title_hero">О нас</h1>
+    </div>
+    <div class="text__description">Откройте дверь в мир истории, гостеприимства и незабываемых впечатлений</div>
+  </div>
+  <div class="hero__illustration__box">
+    <video class="video__hero" autoplay muted loop width="100%" height="100%" style="object-fit:cover;">
+      <source src="{% static 'video/video2.mp4' %}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+      <source src="{% static 'video/video2.mp4' %}">
+    </video>
+
+  </div>
+
+</section>
+<section class="content">
+
+
+
+  <div class="content__block1">
+    <div class="descrption__block">
+      <h1 class="h2__title">Наша история</h1>
+      <p class="text__block1">Андозерская усадьба - это уникальное место, богатое историей и традициями. Наша усадьба
+        была основана в XIX веке и с тех
+        пор служит уютным убежищем для путешественников и любителей природы.</p>
+      <p class="text__block1">Мы гордимся нашими корнями и стремимся сохранить атмосферу и наследие этого прекрасного
+        места.</p>
+    </div>
+
+    <div class="img__block1">
+      <img src="{% static 'img/about/photo1.png' %}" alt="">
+    </div>
+
+  </div>
+  <div class="content__block2">
+    <div class="img__block1">
+      <img src="{% static 'img/about/photo2.png' %}" alt="">
+    </div>
+    <div class="descrption__block">
+      <h1 class="h2__title__block2">Наше видение</h1>
+      <p class="text__block1">В Андозерской усадьбе мы стремимся создать гостеприимную атмосферу, где гости могут
+        расслабиться, насладиться прекрасной
+        природой и погрузиться в аутентичную русскую культуру.
+      </p>
+      <p class="text__block1">Мы предлагаем разнообразные услуги и мероприятия, чтобы каждый гость мог найти что-то по
+        своему вкусу и создать
+        незабываемые воспоминания.
+      </p>
+    </div>
+
+
+  </div>
+  <div class="content__block3">
+    <div class="descrption__block">
+      <h1 class="h2__title__block3">Наша команда</h1>
+      <p class="text__block1">Мы - дружная и опытная команда профессионалов, которые полностью преданы своему делу. Наш
+        персонал обладает глубоким
+        знанием местных традиций и культуры, и всегда готов приветливо принять гостей и оказать им помощь.
+
+      </p>
+      <p class="text__block1">Мы стремимся к высокому уровню обслуживания, внимательно относимся к потребностям и
+        пожеланиям наших гостей, чтобы
+        сделать их пребывание в Андозерской усадьбе незабываемым.
+
+      </p>
+    </div>
+
+    <div class="img__block1">
+      <img src="{% static 'img/about/photo3.png' %}" alt="">
+    </div>
+
+  </div>
+</section>
+{% endblock %}

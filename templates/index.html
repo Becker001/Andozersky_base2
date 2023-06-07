@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero__text">
+        <div class="text__caption"></div>
+        <div class="text__title">
+            <h1 class="h1__title_hero">Гостевой дом Андозерская усадьба</h1>
+        </div>
+        <div class="text__description">Ваше идеальное место для незабываемого отдыха</div>
+    </div>
+    <div class="hero__buttons">
+        <a href="{% url 'book' %}" class="btn__primary_one">Забронировать</a>
+    </div>
+    <div class="hero__illustration__box">
+        <video class="video__hero" autoplay muted loop width="100%" height="100%" style="object-fit:cover;">
+            <source src="{% static 'video/hero_video.mp4' %}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            <source src="{% static 'video/hero_video.mp4' %}">
+        </video>
+        <div class="hero__illustration">
+            <img src="{% static 'img/hero_illustration1.png' %}" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="review">
+    <div class="title__review">
+        <h1 class="h1__title_main">Никто не знает ваш кемпинг лучше вас</h1>
+    </div>
+    <div class="review__block">
+        <div class="text__review">
+            <div class="icon__review">
+                <img src="{% static 'img/Emoji.png' %}" alt="иконка рук">
+            </div>
+            <p class=text__review__one>
+                Нашим ключом к успеху были наши постоянные беседы и интервью как с отдыхающими, так и с кемпингами.
+
+            </p>
+
+            <p class="text__review__two">Мы создали и продолжаем улучшать нашу андозёрскую базу с учётом всей собранной
+                обратной связи, все это ради того, чтобы
+                вы были довольны.
+            </p>
+            <a href="feedback.html#video_review" class="btn__secondary">Больше интервью</a>
+        </div>
+        <div class="video__review">
+
+            <video class="video__rol" autoplay muted loop width="100%" height="100%" style="object-fit:cover;">
+                <source src="{% static 'video/video.mp4' %}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="{% static 'video/video.mp4' %}">
+            </video>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="content">
+
+    <div class="title__content">
+        <h1 class="h1__title_main">Три ключевые точки туристической базы</h1>
+    </div>
+
+    <div class="content__block1">
+        <div class="descrption__block">
+            <h1 class="h2__title_p">Природная красота и уединение</h1>
+            <div class="number__title"><img src="{% static 'img/decorative/1.svg' %}" alt=""></div>
+            <p class="text__block1">Андозерская усадьба находится в живописной местности рядом с озером и нетронутыми
+                хвойными лесами.</p>
+            <p class="text__block1__two">Это создает уникальную атмосферу уединения и спокойствия, что делает усадьбу
+                привлекательным местом для отдыха и
+                приятного времяпровождения.</p>
+            <a href="{% url 'book' %}" class="btn__secondary">Найти</a>
+        </div>
+
+        <div class="img__block1">
+            <img src="{% static 'img/main_page/img1.png' %}" alt="">
+            <div class="elements__block1"><img src="{% static 'img/decorative/Emoji.png' %}" alt=""></div>
+        </div>
+
+
+    </div>
+    <div class="content__block2">
+        <div class="img__block1">
+            <img src="{% static 'img/main_page/img2.png' %}" alt="">
+            <div class="elements__block2">
+                <img src="{% static 'img/decorative/Emoji2.png' %}" alt="">
+            </div>
+        </div>
+        <div class="descrption__block">
+            <h1 class="h2__title__block2">Развлечения и мастер-классы</h1>
+            <div class="number__title1"><img src="{% static 'img/decorative/2.svg' %}" alt=""></div>
+            <p class="text__block1">Андозерская усадьба предлагает различные мастер-классы и интерактивные программы.
+            </p>
+            <p class="text__block1">Это включает в себя приготовление пищи в русской печи, мастерство плетения из
+                бересты, создание картин из бересты,
+                валяние валенков, декорирование деревянных изделий и многое другое.
+            </p>
+            <p class="text__block1__two">Гости также могут насладиться рыбалкой, походами в лес и на море, а также
+                научиться играть на баяне или наслаждаться
+                выступлениями бардов.</p>
+            <a href="{% url 'about' %}" class="btn__secondary">Особенности</a>
+        </div>
+
+
+    </div>
+    <div class="content__block3">
+        <div class="descrption__block">
+            <h1 class="h2__title__block3">Аутентичная русская атмосфера</h1>
+            <div class="number__title1"><img src="{% static 'img/decorative/3.svg' %}" alt=""></div>
+            <p class="text__block1">В Андозерской усадьбе гости могут ощутить дух русской деревенской жизни.
+            </p>
+            <p class="text__block1">Самобытный деревенский домик, русская кухня с блюдами, приготовленными на углях в
+                русской печи, а также возможность
+                попробовать традиционные пироги создают атмосферу старины и аутентичности.
+            </p>
+            <p class="text__block1">Фотосессия в русском доме также может стать запоминающимся моментом для гостей.</p>
+        </div>
+
+        <div class="img__block1">
+            <img src="{% static 'img/main_page/img3.png' %}" alt="">
+            <div class="elements__block3">
+                <img src="{% static 'img/decorative/cloud1.png' %}" alt="">
+            </div>
+            <div class="elements__block3_1">
+                <img src="{% static 'img/decorative/cloud2.png' %}" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section class="form">
+    <div class="form__box">
+        <div class="content__form">
+            <div class="icon__form"><img src="{% static 'img/element1.png' %}" alt="#"></div>
+            <div class="title__box">
+                <h1 class="title__form">Остались вопросы?</h1>
+            </div>
+            <p class="description__form">Если у вас есть вопросы, предложения или замечания - просто заполните форму
+                ниже:
+            </p>
+        </div>
+        <div class="inputs__form">
+            <form name="test" method="post" action="">
+                {% csrf_token %}
+                {% if success %}
+                <div>
+                    <strong>Спасибо за сообщение</strong>
+                </div>
+                {% endif %}
+                <div class="input__box__one">
+                    <div class="input__name">
+                        <p class="caption__form">Имя</p>
+
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                        <div>
+                            <strong>{{ form.name.errors }}</strong>
+                        </div>
+                        {% endif %}
+                        <!--                        <input class="input__form" type="text" size="40" placeholder="Иван" required>-->
+
+                    </div>
+                    <div class="input__suname">
+                        <p class="caption__form">Фамилия</p>
+                        {{ form.surname }}
+                        {% if form.surname.errors %}
+                        <div>
+                            <strong>{{ form.surname.errors }}</strong>
+                        </div>
+                        {% endif %}
+                        <!--                        <input class="input__form" type="text" size="40" placeholder="Васильев">-->
+                    </div>
+                </div>
+                <div class="input__box__two">
+                    <div class="input__email">
+
+                        <p class="caption__form">Почта</p>
+
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                        <div>
+                            <strong>{{ form.email.errors }}</strong>
+                        </div>
+                        {% endif %}
+                        <!--                        <input class="input__form" type="text" size="40" placeholder="example@gmail.com">-->
+
+                    </div>
+                    <div class="input__number">
+                        <p class="caption__form">Телефон</p>
+
+                        {{ form.number }}
+                        {% if form.number.errors %}
+                        <div>
+                            <strong>{{ form.number.errors }}</strong>
+                        </div>
+                        {% endif %}
+                        <!--                        <input class="input__form" type="text" size="40" placeholder="+1 (XXX) XXX-XX-XX">-->
+                    </div>
+                </div>
+                <div class="input__message">
+                    <p class="caption__form">Сообщение</p>
+
+                    {{ form.message }}
+                    {% if form.message.errors %}
+                    <div>
+                        <strong>{{ form.message.errors }}</strong>
+                    </div>
+                    {% endif %}
+                    <!--                <textarea class="form__message" name="comment" cols="40" rows="3" placeholder="Сообщение"-->
+                    <!--                    maxlength="1000"></textarea>-->
+                </div>
+                <div class="input__send"><input class="button__message" type="submit" value="Отправить"></div>
+            </form>
+
+
+        </div>
+    </div>
+
+</section>
+
+<section class="map">
+    <div class="text__box__map">
+        <div class="title__map">
+            <h1 class="h1__title_main">Мы на карте</h1>
+        </div>
+        <p class="description__map">Мы располагаемся в относительной близости от городской среды</p>
+    </div>
+    <div class="map_interective">
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b4ec3dcacc471dbeac90d0b86039d236c69cfd1c582b869a9cef5280611bc29&amp;source=constructor"
+            width="100%" height="600" frameborder="0"></iframe>
+    </div>
+
+
+</section>
+<section class="feedback">
+    <div class="feedback__box">
+        <h1 class="feedback__title">Отзывы о Андозерской усадьбе</h1>
+    </div>
+    <div class="feedback__corusel">
+        <div class="feedback__corusel__box">
+            <div class="review__feedback">
+                <p class="description__feedback">Я побывал в Андозерская усадьбе и был приятно удивлен их
+                    глэмпинг-услугами.
+                    Они предоставляют комфортабельные и уютные
+                    палатки с кроватями и всем необходимым оборудованием для проживания на природе. Кроме того, их
+                    территория
+                    находится в
+                    очень красивом месте среди лесов и рек, что делает пребывание здесь еще более приятным. Я рекомендую
+                    этот
+                    кемпинг для
+                    всех, кто ищет спокойный и комфортный отдых на природе.</p>
+                <div class="user__feedback">
+                    <div class="img__ueser"><img src="{% static 'img/users/Ellipse 24.png' %}" alt=""></div>
+                    <div class="description__user">
+                        <h5 class="name__user">Лука Беляев</h5>
+                        <p class="info__user">Омск</p>
+                    </div>
+                </div>
+                <div class="rating__feedback">
+                    <div class="stars__feedback"><img src="{% static 'img/raitings/rating5.png' %}" alt=""></div>
+                    <div class="number__feedback">
+                        <p class="rating__number">5.0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review__feedback">
+                <p class="description__feedback">Андозерская усадьба - отличное место для отдыха на природе с комфортом
+                    глэмпинга.
+                    Я остался впечатлен комфортом и чистотой палаток в Андозерская усадьбе.
+                    Любителям природы и комфорта - это место для вас!</p>
+                <div class="user__feedback">
+                    <div class="img__ueser"><img src="{% static 'img/users/users15.png' %}" alt=""></div>
+                    <div class="description__user">
+                        <h5 class="name__user">Иван Врачёв</h5>
+                        <p class="info__user">Кострома</p>
+                    </div>
+                </div>
+                <div class="rating__feedback">
+                    <div class="stars__feedback"><img src="{% static 'img/raitings/rating45.png' %}" alt=""></div>
+                    <div class="number__feedback">
+                        <p class="rating__number">4.5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review__feedback">
+                <p class="description__feedback">Лесные тропинки и кристально чистые реки окружают Андозерская усадьбу,
+                    что
+                    делает отдых еще более приятным.
+                    Я провел здесь незабываемый отпуск с семьей и друзьями.
+                    Обслуживание в Андозерской усадьбе было безупречным, всегда готовы помочь и ответить на все вопросы.
+                </p>
+                <div class="user__feedback">
+                    <div class="img__ueser"><img src="{% static 'img/users/users10.png' %}" alt=""></div>
+                    <div class="description__user">
+                        <h5 class="name__user">Максим Акиньхов </h5>
+                        <p class="info__user">Ярославль</p>
+                    </div>
+                </div>
+                <div class="rating__feedback">
+                    <div class="stars__feedback"><img src="{% static 'img/raitings/rating4.png' %}" alt=""></div>
+                    <div class="number__feedback">
+                        <p class="rating__number">4.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line__corusel"></div>
+        <div class="button__box">
+            <a href="{% url 'feedback' %}" class="button__review">Больше отзывов</a>
+        </div>
+    </div>
+</section>
+
+<section class="distribution">
+    <div class="description__box">
+        <h1 class="h1__title_main">Подписывайся на нашу новостную рассылку</h1>
+        <div class="subtitle__box"><img class="point__subtitle" src="{% static 'img/point.png' %}" alt="point">
+            <p class="subtitle__distribution">Отказаться от подписки можно в любое время.</p>
+        </div>
+    </div>
+    <div class="input__distribution">
+        <form name="test" method="post" action="">
+            <div class="subscription_box">
+                {% csrf_token %}
+                {% if success %}
+                <div>
+                    <strong>Спасибо за сообщение</strong>
+                </div>
+                {% endif %}
+                {{ form.email2 }}
+                {% if form.email2.errors %}
+                <div>
+                    <strong>{{ form.email2.errors }}</strong>
+                </div>
+                {% endif %}
+
+                <input class="email__distribution" type="text" placeholder="Email">
+
+                <button class="btn__primary_one">Подписаться</button>
+
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+{% endblock %}

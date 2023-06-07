@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="hero__text">
+    <div class="text__caption">Андозёрская усадьба</div>
+    <div class="text__title">
+      <h1 class="h1__title_hero">Услуги</h1>
+    </div>
+    <div class="text__description">Одно из преимуществ кемпинга и глэмпинга - возможность предоставления различных
+      услуг для улучшения опыта гостей</div>
+  </div>
+</section>
+<section class="content">
+
+  <div class="title__content">
+    <h1 class="h1__title_main">Что мы предлагаем</h1>
+  </div>
+
+  <div class="content__block1">
+    <div class="descrption__block">
+      <h1 class="h2__title_servisec">Релаксация в окружении природы</h1>
+      <p class="text__block1">Отдохните от суеты города и насладитесь спокойствием природы в Андозерской усадьбе.
+      </p>
+      <p class="text__block1">Мы предлагаем комфортабельные номера, окруженные зелеными хвойными лесами и озером, где вы
+        сможете расслабиться и
+        насладиться умиротворением окружающей среды.</p>
+    </div>
+
+    <div class="img__block1">
+      <img src="{% static 'img/servises_img/photo1.png' %}" alt="">
+    </div>
+
+  </div>
+  <div class="content__block2">
+    <div class="img__block1">
+      <img src="{% static 'img/servises_img/photo2.png' %}" alt="">
+    </div>
+    <div class="descrption__block">
+      <h1 class="h2__title__block2">Культурное погружение в историю</h1>
+      <p class="text__block1">Погрузитесь в богатую культурную историю Андозерской усадьбы.
+      </p>
+      <p class="text__block1">Мы предлагаем экскурсии и мастер-классы, где вы сможете узнать о традициях русской кухни,
+        ремеслах и народных ремеслах.
+      </p>
+      <p class="text__block1">Ощутите атмосферу старинной русской деревни и познакомьтесь с уникальными ремесленными
+        техниками.
+      </p>
+    </div>
+
+
+  </div>
+  <div class="content__block3">
+    <div class="descrption__block">
+      <h1 class="h2__title__block3">Активный отдых и развлечения</h1>
+      <p class="text__block1">У нас есть множество активных развлечений для тех, кто любит приключения на природе.</p>
+      <p class="text__block1">
+        Организуем пешие и лыжные походы с
+        опытными гидами, рыбалку, прогулки на лодках и многое другое.
+      </p>
+      <p class="text__block1">
+        Вы сможете насладиться увлекательными
+        активностями,
+        окруженные красотой природы Андозерской усадьбы.
+      </p>
+    </div>
+
+    <div class="img__block1">
+      <img src="{% static 'img/servises_img/photo3.png' %}" alt="">
+    </div>
+
+  </div>
+
+
+</section>
+
+{% endblock %}

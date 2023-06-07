@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero__contact">
+
+  <div class="hero__text">
+
+    <div class="text__caption">Андозерская усадьба</div>
+    <div class="text__title">
+      <h1 class="h1__title_hero">Контакты</h1>
+    </div>
+
+    <div class="text__description_contact">
+      <a class="description_contact" href="tel:7(871) 743-7762">Контактный номер по вопросам: +7(871) 743-7762</a>
+    </div>
+
+    <div class="icon__contact">
+
+      <a class="contact__icon" href="https://web.telegram.org/" target="_blank">
+        <img class="icon__footer" src="{% static 'img/icon/telegram.png' %}" alt="telegram">
+      </a>
+      <a class="contact__icon" href="https://vk.com/andozer_usadba" target="_blank">
+        <img class="icon__footer" src="{% static 'img/icon/vk-white.png' %}" alt="vk">
+      </a>
+      <a class="contact__icon__last" href="https://ask.fm/" target="_blank">
+        <img class="icon__footer" src="{% static 'img/icon/ask-white.png' %}" alt="ask">
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="data">
+  <div class="data__box">
+    <div class="data__text">
+      <h1 class="h2__title">Как добраться</h1>
+      <a class="contact__description_one" href="https://yandex.ru/maps/-/CCUw7MCYhC" target="_blank">Наши координаты:
+        63.928443, 38.289881</a>
+      <p class="contact__description_two">Д. Андозеро, Онежский район, Архангельская обл.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="map">
+  <div class="map_interective">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b4ec3dcacc471dbeac90d0b86039d236c69cfd1c582b869a9cef5280611bc29&amp;source=constructor"
+      width="100%" height="600" frameborder="0"></iframe>
+  </div>
+
+
+</section>
+
+
+{% endblock %}

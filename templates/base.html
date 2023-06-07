@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андозерская усадьба</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+   rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+    <head class="nav__bar">
+        <div class="nav__bar_item">
+            <a class="logo" href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt=""></a>
+            <nav class="nav__right">
+                <ul class="nav__items">
+                    <li class="nav__item"><a class="link__nav" href="{% url 'index' %}">Главная</a></li>
+                    <li class="nav__item"><a class="link__nav" href="{% url 'feedback' %}">Отзывы и ревью</a></li>
+                    <li class="nav__item"><a class="link__nav" href="{% url 'about' %}">О нас</a></li>
+                    <li class="nav__item"><a class="link__nav" href="{% url 'services' %}">Услуги</a></li>
+                    <li class="nav__item"><a class="link__nav" href="{% url 'contact' %}">Контакты</a></li>
+                    <li class="nav__item"><a class="link__nav" href="{% url 'book' %}">Забронировать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </head>
+    {% block content %}
+    {% endblock %}
+    <section class="footer">
+        <div class="box__footer">
+
+            <div class="content__footer">
+
+                <div class="icons_social">
+                    <a href="https://web.telegram.org/" target="_blank">
+                        <img class="icon__footer" src="{% static 'img/icon/telegram.png' %}" alt="telegram">
+                    </a>
+                    <a href="https://vk.com/andozer_usadba" target="_blank">
+                        <img class="icon__footer" src="{% static 'img/icon/vk.png' %}" alt="vk">
+                    </a>
+                </div>
+
+                <div class="info__footer">
+
+                    <div class="colon__footer_one">
+                        <h4 class="title__footer">Телефон</h4>
+                        <a class="description__footer" href="tel:+7 906 280 77 70">+7 906 280 77 70</a>
+                    </div>
+
+                    <div class="colon__footer_two">
+                        <h4 class="title__footer">Почта</h4>
+                        <a class="description__footer" href="mailto:andozero-usadba@mail.ru">andozero-usadba@mail.ru</a>
+                    </div>
+
+                    <div class="colon__footer_three">
+                        <h4 class="title__footer">Адрес</h4>
+                        <a class="description__footer" href="https://yandex.ru/maps/-/CCUw7CXaGC"
+                            target="_blank">592468,
+                            Деревня андозеро, онежский р-н, архангельская обл.</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="copywriting__footer__box">
+                <p class="copywriting__footer">© Андозерская усадьба 2023</p>
+            </div>
+
+        </div>
+    </section>
+    <script src="{% static 'js/script2.js' %}"></script>
+</body>
+
+</html>
